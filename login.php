@@ -16,7 +16,11 @@
 																 echo "Registro completo";
 																 }
 									}
-			
+		if(isset($_SESSION["habilitado"]))	{
+											if($_SESSION["habilitado"] == "no")	{
+																				echo "El usuario no se encuentra habilitado";
+																				}	
+											}
 		?>
 	
 		<form method = "POST" action = "php/valida.php">

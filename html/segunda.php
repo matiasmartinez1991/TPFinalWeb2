@@ -10,10 +10,7 @@ session_start();
 		}else{
 			 header('location: ../login.php'); 
 			 }  
-/*
-<?php $nombre = $_SESSION["nombre"];
-					echo "$nombre"; ?>			 
-*/
+
 ?>
 
 <html>

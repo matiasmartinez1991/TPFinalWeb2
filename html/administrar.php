@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <?php
-if ()
+
 ?>
 
 <html>
@@ -16,9 +16,9 @@ if ()
 				<input type = "text" name = "nombre"></input>
 				<br>
 				<br>
-				<input type = "checkbox" name = "borrar" 	value = "true">Borrar</input>
-				<input type = "checkbox" name = "ver"	 	value = "true">Ver</input>
-				<input type = "checkbox" name = "modificar" value = "true">Modificar</input>
+				<input type = "radio" name = "accion" value = "borrar">Borrar</input>
+				<input type = "radio" name = "accion" value = "ver">Ver</input>
+				<input type = "radio" name = "accion" value = "modificar">Modificar</input>
 				<br>
 				<input type = "submit"	 value = "Consultar"></input>
 	</form>
@@ -29,29 +29,23 @@ if ()
 			
 <?php
 
-include 'funciones.php';
+include '../php/funciones.php';
 
 
 $nombre = $_POST['nombre'];
-$borrar = $_POST['borrar'];
-$ver    = $_POST['ver'];
-$modificar = $_POST['modificar'];
+$acc	= $_POST['accion'];
 
-
-conectar();
+$link = conectar();
 								
-if($borrar == "true")	{
-						$link = conectar();
+if($acc == "borrar")	{
 						borrar($nombre, $link);
 						}
 
-if($ver == "true")		{
-						$link = conectar();
+if($acc == "ver")		{
 						ver($nombre, $link);
 						}
 
-if($modificar == "true"){
-						$link = conectar();
+if($acc == "modificar")	{
 						modificar($nombre, $link);
 						}						
 						

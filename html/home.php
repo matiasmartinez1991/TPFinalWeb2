@@ -35,7 +35,7 @@ session_start();
 		<br>
 		<a href = "segunda.php"> Segunda </a>
 		<br>
-		<a href = "../php/logout.php"> Logout </a>	
+		<a href = "logout.php"> Logout </a>	
 		
 	</body>
 
