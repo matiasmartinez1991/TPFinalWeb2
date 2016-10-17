@@ -56,8 +56,8 @@
 			
 		</form>
 		
-		<a href = "html/registro.html"> Registrarse </a>
-		<a href = "html/registro.html">
+		<a href = "html/registro.php"> Registrarse </a>
+		<a href = "html/registro.php">
 			<button>Registrarse</button>
 		</a>
 	</body>
