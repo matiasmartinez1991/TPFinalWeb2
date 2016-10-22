@@ -12,12 +12,14 @@
 	
 		<?php
 		if(isset($_SESSION["reg"]))	{
-									if ($_SESSION["reg"]=="true"){
-																 echo "Registro completo";
-																 }
+									if ($_SESSION["reg"]=="true")	{
+																	$_SESSION["reg"]=="false";
+																	echo "Registro completo";
+																	}
 									}
 		if(isset($_SESSION["habilitado"]))	{
 											if($_SESSION["habilitado"] == "no")	{
+																				$_SESSION["habilitado"] == "si";
 																				echo "El usuario no se encuentra habilitado";
 																				}	
 											}
@@ -41,7 +43,7 @@
 			<br>
 			
 			<p> Ingrese su clave </p>
-			<input type = "password" name = "pass"></input>
+			<input type = "password" name = "contraseña"></input>
 			<br>
 			
 			<label> Recordarme </label>
@@ -57,9 +59,7 @@
 		</form>
 		
 		<a href = "html/registro.php"> Registrarse </a>
-		<a href = "html/registro.php">
-			<button>Registrarse</button>
-		</a>
+		
 	</body>
 
 

@@ -8,9 +8,9 @@ function conectar() {
 					return $conexion;
 					}
 
-function buscar($link, $validar, $nombre, $pass)
+function buscar($link, $nombre, $contraseña)
 					{					
-					$validar = mysqli_query ($link, "SELECT * from Usuarios WHERE nombre LIKE '$nombre' AND clave LIKE '$pass' ")
+					$validar = mysqli_query ($link, "SELECT * from Usuarios WHERE nombre LIKE '$nombre' AND contraseña LIKE '$contraseña';")
 					or die ("Fallo la consulta");
 						
 					return $validar;
@@ -23,7 +23,7 @@ function ver($nombre, $link)
 						
 					$ver = mysqli_fetch_assoc($query);
 								
-					echo "<br>Nombre: " . $ver["nombre"] . "<br>Clave: " . $ver["clave"] . "<br>Tipo de usuario: " . $ver["tipo"] . "<br>Habilitado: " . $ver["habilitado"];
+					echo "<br>Nombre: " . $ver["nombre"] . "<br>Contraseña: " . $ver["contraseña"] . "<br>Tipo de usuario: " . $ver["administrador"] . "<br>Habilitado: " . $ver["habilitado"];
 					}			
 
 function modificar($nombre, $link)

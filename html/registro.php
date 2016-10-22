@@ -1,10 +1,8 @@
 <html>
 
-
 	<head>
 
 	</head>
-
 
 	<body>
 		
@@ -17,6 +15,9 @@
 			<br>
 			<p>Repita su clave</p>
 			<input type = "password" name = "pass2" ></input>
+			<br>
+			<p>Ingrese su email</p>
+			<input type = "text" name = "email"></input>
 			<br>
 			<br>
 			<input type = "submit" value = "Aceptar">

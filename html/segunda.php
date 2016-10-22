@@ -8,7 +8,7 @@ session_start();
 		{
 		
 		}else{
-			 header('location: ../login.php'); 
+			 header('location: ../index.php'); 
 			 }  
 
 ?>
@@ -48,13 +48,13 @@ session_start();
 		
 		}
 		else{
-			header('location: login.php');
+			header('location: index.php');
 			} 
 	*/
   	if ($_SESSION['login'] == "on")
 		{
 		
 		}else{
-			 header('location: login.php'); 
+			 header('location: index.php'); 
 			 }  
 ?>

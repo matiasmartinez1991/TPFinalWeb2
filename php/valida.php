@@ -9,20 +9,20 @@ include 'funciones.php';
 include '../clases/users.php';
 
 $nombre = $_POST['nombre'];
-$pass	= md5($_POST['pass']);
+$contraseña	= md5($_POST['contraseña']);
 $recordar = $_POST['recordar'];
 
 
 
-if (empty($nombre) || empty($pass))
+if (empty($nombre) || empty($contraseña))
 		{
 		echo "Debe ingresar los dos campos";
-		echo '<br> <a href = "../login.php"> Login </a>';
+		echo '<br> <a href = "../index.php"> Login </a>';
 		}
 		else{
 			$link = conectar();
 
-			$validar = buscar($link, $validar, $nombre, $pass);
+			$validar = buscar($link, $nombre, $contraseña);
 			
 			$resultado = mysqli_num_rows($validar);
 			
@@ -32,13 +32,13 @@ if (empty($nombre) || empty($pass))
 		
 			if ($inf["habilitado"] == "no") {
 											$_SESSION["habilitado"]="no"; 
-											header('location: ../login.php');
+											header('location: ../index.php');
 											} 
 			else{				
 			if ($resultado == 1){						//RECORDAR USUARIO Y CLAVE SOLO EN LOS BOXES DEL LOGIN
 								if ($recordar == "true"){
 														setcookie("nombre", $nombre, time()+60*60*20, "/");
-														setcookie("password", $pass, time()+60*60*20, "/");
+														setcookie("password", $contraseña, time()+60*60*20, "/");
 															
 														$_SESSION["login"] = "on";
 															

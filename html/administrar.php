@@ -2,8 +2,15 @@
 session_start();
 ?>
 
-<?php
+<?php 
 
+	if ($_SESSION['login'] == "on")
+		{
+		
+		}else{
+			 header('location: ../index.php'); 
+			 }  
+										
 ?>
 
 <html>

@@ -11,7 +11,7 @@
 		$_SESSION["reg"]	= "false";
 		}
 		else{
-			header('location: ../login.php');
+			header('location: ../index.php');
 			} 
 ?>
 

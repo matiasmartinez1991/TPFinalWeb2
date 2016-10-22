@@ -3,13 +3,12 @@ session_start();
 ?>
 
 <?php 
-	
-	
+
 	if ($_SESSION['login'] == "on")
 		{
 		
 		}else{
-			 header('location: ../login.php'); 
+			 header('location: ../index.php'); 
 			 }  
 										
 ?>
@@ -40,22 +39,3 @@ session_start();
 	</body>
 
 </html>
-
-<?php
-
-/*
-	if(($_SESSION['nombre'] == $_COOKIE["nombre"]) && ($_SESSION['pass'] == $_COOKIE["password"]))
-		{
-		
-		}
-		else{
-			header('location: login.php');
-			} 
-*/		
-/* PRUEBA DE VARIABLES
-if ($_SESSION['nombre'] == $_COOKIE["nombre"]){		 
-												echo $_SESSION['nombre'];
-												echo $_COOKIE["nombre"];		 
-												}
-*/		
-?>
